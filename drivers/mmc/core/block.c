@@ -1323,7 +1323,6 @@ static int mmc_blk_part_switch_post(struct mmc_card *card,
 	const unsigned int mask = EXT_CSD_PART_CONFIG_ACC_RPMB;
 	int ret = 0;
 
-<<<<<<< HEAD
 #if defined(CONFIG_MTK_EMMC_CQ_SUPPORT) || defined(CONFIG_MTK_EMMC_HW_CQ)
 	if (part_type == EXT_CSD_PART_CONFIG_ACC_RPMB)
 		mmc_retune_unpause(card->host);
@@ -1339,9 +1338,6 @@ static int mmc_blk_part_switch_post(struct mmc_card *card,
 #else
 
 	if (part_type == EXT_CSD_PART_CONFIG_ACC_RPMB) {
-=======
-	if ((part_type & mask) == mask) {
->>>>>>> 014241ad77dda0eafbdf671d5b8e86917d8ec97e
 		mmc_retune_unpause(card->host);
 		if (card->reenable_cmdq && !card->ext_csd.cmdq_en)
 			ret = mmc_cmdq_enable(card);

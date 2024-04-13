@@ -1855,11 +1855,7 @@ int ext4_mb_try_best_found(struct ext4_allocation_context *ac,
 			ext4_mb_use_best_found(ac, e4b);
 		}
 	}
-<<<<<<< HEAD
-=======
-
 out:
->>>>>>> v4.14.340-openela
 	ext4_unlock_group(ac->ac_sb, group);
 	ext4_mb_unload_buddy(e4b);
 
